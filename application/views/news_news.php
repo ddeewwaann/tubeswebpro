@@ -156,6 +156,30 @@
                                 <a class="nav-link news" href="<?php echo base_url('index.php/webController/news_competition') ?>">COMPETITION</a>
                             </li>
                             </ul>
+                        
+                            <div class="row">
+                                <div class="col-12">
+                                    <?php if (empty($news)) : ?>
+                                        <div class="alert alert-danger" role="alert">
+                                            Data tidak ditemukan
+                                        </div>
+                                    <?php endif; ?>
+                                    <table class="table mt-5">
+                                        <tbody>
+                                            <tr><?php foreach ($news as $nws) : ?>
+                                                <td width="10%"><h10><?= $nws['nama_game']; ?></h10></td>
+                                                <td width="70%">
+                                                    <strong><?= $nws['judul']; ?></strong>
+                                                    <p><?= $nws['keterangan']; ?></p>
+                                                    </td>
+                                                <td width="20%"><p><?= $nws['waktu']; ?></p></td>
+                                            </tr>
+                                            <?php endforeach; ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        
                     </div>
                     <div class="col-2">
                         <h5>Find us on Youtube</h5>
@@ -164,6 +188,13 @@
                 </div>
             </div>
         </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <br>
         <section class="footer">
             <div class="container-fluid">

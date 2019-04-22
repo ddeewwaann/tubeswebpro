@@ -156,6 +156,29 @@
                                 <a class="nav-link news" href="<?php echo base_url('index.php/webController/news_competition') ?>">COMPETITION</a>
                             </li>
                             </ul>
+                        
+                        <div class="row">
+                                <div class="col-12">
+                                    <?php if (empty($notice)) : ?>
+                                        <div class="alert alert-danger" role="alert">
+                                            Data tidak ditemukan
+                                        </div>
+                                    <?php endif; ?>
+                                    <table class="table mt-5">
+                                        <tbody>
+                                            <tr><?php foreach ($notice as $ntc) : ?>
+                                                <td width="10%"><h10><?= $ntc['nama_game']; ?></h10></td>
+                                                <td width="70%">
+                                                    <strong><?= $ntc['judul']; ?></strong>
+                                                    <p><?= $ntc['keterangan']; ?></p>
+                                                    </td>
+                                                <td width="20%"><p><?= $ntc['waktu']; ?></p></td>
+                                            </tr>
+                                            <?php endforeach; ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                     </div>
                     <div class="col-2">
                         <h5>Find us on Youtube</h5>
@@ -164,6 +187,14 @@
                 </div>
             </div>
         </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <br>
         <section class="footer">
             <div class="container-fluid">

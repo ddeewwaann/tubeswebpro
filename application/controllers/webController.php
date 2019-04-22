@@ -22,6 +22,7 @@ class webController extends CI_Controller {
     function __construct(){
         parent::__construct();
         $this->load->model('account');
+        $this->load->model('admin');
     }
 	public function index()
 	{
@@ -170,19 +171,29 @@ class webController extends CI_Controller {
         $this->load->view('news');
     }
     public function news_news(){
-        $this->load->view('news_news');
+        $news = 'news';
+        $data['news'] = $this->admin->getberita($news);
+        $this->load->view('news_news',$data);
     }
     public function news_notice(){
-        $this->load->view('news_notice');
+        $notice = 'notice';
+        $data['notice'] = $this->admin->getberita($notice);
+        $this->load->view('news_notice',$data);
     }
     public function news_update(){
-        $this->load->view('news_update');
+        $update = 'updates';
+        $data['update'] = $this->admin->getberita($update);
+        $this->load->view('news_update',$data);
     }
     public function news_event(){
-        $this->load->view('news_event');
+        $event = 'event';
+        $data['event'] = $this->admin->getberita($event);
+        $this->load->view('news_event',$data);
     }
     public function news_competition(){
-        $this->load->view('news_competition');
+        $competition = 'competition';
+        $data['competition'] = $this->admin->getberita($competition);
+        $this->load->view('news_competition',$data);
     }
 }
 

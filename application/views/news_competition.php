@@ -156,6 +156,28 @@
                                 color: white;" href="<?php echo base_url('index.php/webController/news_competition') ?>">COMPETITION</a>
                             </li>
                             </ul>
+                        <div class="row">
+                                <div class="col-12">
+                                    <?php if (empty($competition)) : ?>
+                                        <div class="alert alert-danger" role="alert">
+                                            Data tidak ditemukan
+                                        </div>
+                                    <?php endif; ?>
+                                    <table class="table mt-5">
+                                        <tbody>
+                                            <tr><?php foreach ($competition as $cpt) : ?>
+                                                <td width="10%"><h10><?= $cpt['nama_game']; ?></h10></td>
+                                                <td width="70%">
+                                                    <strong><?= $cpt['judul']; ?></strong>
+                                                    <p><?= $cpt['keterangan']; ?></p>
+                                                    </td>
+                                                <td width="20%"><p><?= $cpt['waktu']; ?></p></td>
+                                            </tr>
+                                            <?php endforeach; ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                     </div>
                     <div class="col-2">
                         <h5>Find us on Youtube</h5>
@@ -164,6 +186,14 @@
                 </div>
             </div>
         </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <br>
         <section class="footer">
             <div class="container-fluid">
