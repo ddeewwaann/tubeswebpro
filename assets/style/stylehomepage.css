@@ -1,0 +1,53 @@
+.a:hover{
+    color: #A90100;
+}
+.header-homepage{
+    background-color: whitesmoke;
+    height: 80px;
+}
+.header-homepage2{
+    background-color: firebrick;
+    height: 8px;
+}
+
+.nav-link{
+    padding-top: 18px;
+    color: darkslategrey;
+    font-weight: bold;
+}
+.backgroundutama{
+    width: 100%;
+   
+}
+
+.namalogin{
+    background-color: darkslategrey;
+    height: 40px;
+    
+}
+.plogin{
+    color: white;
+    padding-top: 10px;
+    padding-left: 10px;
+    background-color: #37474F;  
+    height: 45px;
+}
+
+.informasi{
+    color: white;
+    padding-top: 10px;
+    padding-left: 10px;
+    background-color: #37474F;  
+    height: 70px;
+    width: 210px;
+}
+
+.pfooter{
+    font-size: 10px;
+    padding-top: 25px;
+}
+
+.footer{
+    background-color: whitesmoke;
+    height: 100px;
+}

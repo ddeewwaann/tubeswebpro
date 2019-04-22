@@ -1,0 +1,52 @@
+.a:hover{
+    color: #A90100;
+}
+.header{
+    background-color: lightgrey;
+}
+
+.nav-item{
+    font-size: 12px;
+}
+.nav-link{
+    color: darkslategray;
+}
+.headerlogo{
+    padding-top: 12px;
+}
+.buttonheader{
+    font-size: 12px;
+    width: 100px;
+    background-color: grey;
+}
+.footer{
+    background-color: whitesmoke;
+    height: 100px;
+}
+.pfooter{
+    font-size: 10px;
+    padding-top: 25px;
+}
+.register{
+    font-size: 20px;
+    font-weight: bold;
+}
+.dropdown-menu{
+    background-image: url(https://img.gemscool.com/allservice/gemscool/media/allgames/allgamebox3_2016_hover.png)
+}
+
+
+
+.news{
+    background-color: #4A4A4A;
+    color: white;
+}
+
+.news:hover{
+    background-color: #A90100;
+    color: white;
+}
+.nav-link active{
+    background-color: #A90100;
+    color: white;
+}
