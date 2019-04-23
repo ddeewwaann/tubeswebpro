@@ -204,9 +204,6 @@ class webController extends CI_Controller {
     public function homepagetos(){
         $this->load->view('homepagetos');
     }
-    public function page_icarus(){
-        $this->load->view('page_icarus');
-    }
 }
 
 
