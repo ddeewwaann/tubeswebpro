@@ -201,6 +201,9 @@ class webController extends CI_Controller {
     public function gstv_page(){
         $this->load->view('gstv_page');
     }
+    public function homepagetos(){
+        $this->load->view('homepagetos');
+    }
 }
 
 

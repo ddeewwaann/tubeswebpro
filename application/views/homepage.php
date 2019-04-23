@@ -186,7 +186,7 @@
                         <a href=""><img src="<?php echo base_url('assets/img/luna.jpg')?>"
                         onmouseover="this.src='<?php echo base_url('assets/img/luna2.jpg')?>'"
                         onmouseout="this.src='<?php echo base_url('assets/img/luna.jpg')?>'"></a>
-                        <a href=""><img src="<?php echo base_url('assets/img/treeos.jpg')?>"
+                        <a href="<?php echo base_url('index.php/webController/homepagetos')?>"><img src="<?php echo base_url('assets/img/treeos.jpg')?>"
                         onmouseover="this.src='<?php echo base_url('assets/img/treeos2.jpg')?>'"
                         onmouseout="this.src='<?php echo base_url('assets/img/treeos.jpg')?>'"></a>
                     </div>
