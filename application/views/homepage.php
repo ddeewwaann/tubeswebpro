@@ -170,7 +170,7 @@
                 <div class="row">
                     <div class="col-2"></div>
                     <div class="col-8">
-                        <a href=""><img src="<?php echo base_url('assets/img/icarus1.jpg')?>"
+                        <a href="<?php echo base_url('index.php/webController/page_icarus')?>""><img src="<?php echo base_url('assets/img/icarus1.jpg')?>"
                         onmouseover="this.src='<?php echo base_url('assets/img/icarus2.jpg')?>'"
                         onmouseout="this.src='<?php echo base_url('assets/img/icarus1.jpg')?>'">
                         </a>
