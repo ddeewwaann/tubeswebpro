@@ -1,0 +1,153 @@
+.a:hover{
+    color: #A90100;
+}
+.header-homepage{
+    background-color: whitesmoke;
+    height: 50px;
+}
+
+.homepage-news{
+    background-color: whitesmoke;
+    padding-left: auto;
+  
+}
+
+.nav-link{
+    padding-top: 10px;
+    color: #777;
+    font-size: 14px;
+   
+     
+}
+
+.navbargstv{
+    padding-top: 18px;
+    color: white;
+    font-weight: bold;
+
+}
+
+#header {
+  background-color: #f1f1f1;
+  padding: 50px 10px;
+  color: black;
+  text-align: center;
+  font-size: 90px; 
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: 0.2s;
+}
+
+.logogstv{
+    background-color: #272727;
+    padding: 15px;
+    height: 40px;
+}
+
+.pencarian{
+    background-color: #272727;
+    padding: 15px;
+    height: 60px;
+}
+
+
+.navbargstv{
+    background-color: #272727;
+    padding: 15px;
+    height: 60px;
+}
+
+.backgroundutama{
+    width: 100%;
+    height: 70%;
+   
+}
+.bawahbg{
+    width : auto;
+    height: auto;
+
+}
+
+body{
+     background-color: #272727;
+}
+
+span{
+    color : white;
+}
+
+h4 {
+    color :white;
+}
+
+#news_devider {
+    
+    background-size: 1900px 55px;
+    background-position: center top;
+    background-color: #000;
+    width: 100%;
+    height: 55px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.homepagenews{
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+  
+}
+.boxkonten {
+    width: 100%;
+    height: 50%;
+
+}
+.bgbawah {
+    width: 100%;
+   
+
+}
+
+.feeds {
+    width: 105%;
+    height: 50%;
+}
+
+.namalogin{
+    background-color: darkslategrey;
+    height: 40px;
+    
+}
+.plogin{
+    color: white;
+    padding-top: 10px;
+    padding-left: 10px;
+    background-color: #37474F;  
+    height: 45px;
+}
+
+
+.informasi{
+    color: white;
+    padding-top: 10px;
+    padding-left: 10px;
+    background-color: #37474F;  
+    height: 45px;
+    width: 210px;
+}
+
+.pfooter{
+    font-size: 16px;
+    padding-top: 25px;
+    color: white;
+}
+
+.footer{
+    background-color: #3C3C3C;
+    height: 160px;
+}
+

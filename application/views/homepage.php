@@ -54,7 +54,7 @@
                                 <li class="nav-item"><a class="nav-link a" href="">FORUM</a></li>
                                 <li class="nav-item"><a class="nav-link a" href="">G-CASH</a></li>
                                 <li class="nav-item"><a class="nav-link a" href="<?php echo base_url('index.php/webController/download') ?>">DOWNLOAD</a></li>
-                                <li class="nav-item"><a class="nav-link a" href="">GEMSCOOL TV</a></li>
+                                <li class="nav-item"><a class="nav-link a" href="<?php echo base_url('index.php/webController/gstv_page') ?>">GEMSCOOL TV</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -196,7 +196,7 @@
                 <div class="row">
                     <div class="col-2"></div>
                     <div class="col-8">
-                        <a href=""><img src="<?php echo base_url('assets/img/LS.jpg')?>"
+                        <a href="<?php echo base_url('index.php/webController/page_ls')?>"><img src="<?php echo base_url('assets/img/LS.jpg')?>"
                         onmouseover="this.src='<?php echo base_url('assets/img/LS2.jpg')?>'"
                         onmouseout="this.src='<?php echo base_url('assets/img/LS.jpg')?>'"></a>
                         <a href=""><img src="<?php echo base_url('assets/img/DN.jpg')?>"

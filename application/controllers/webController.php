@@ -195,6 +195,12 @@ class webController extends CI_Controller {
         $data['competition'] = $this->admin->getberita($competition);
         $this->load->view('news_competition',$data);
     }
+    public function page_ls(){
+        $this->load->view('page_ls');
+    }
+    public function gstv_page(){
+        $this->load->view('gstv_page');
+    }
 }
 
 
