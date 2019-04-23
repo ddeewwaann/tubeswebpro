@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 22, 2019 at 05:50 PM
+-- Generation Time: Apr 23, 2019 at 05:21 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -59,7 +59,7 @@ CREATE TABLE `competition` (
 --
 
 INSERT INTO `competition` (`id`, `nama_game`, `judul`, `keterangan`, `waktu`) VALUES
-(2, 'LostSaga', 'adwadwdawawdawddwa', 'dawwwwwwwwwwwwwdwaawdf', '2019-04-22 12:12:44');
+(2, 'LostSaga', 'adwadwdawawdawddwa', 'a', '2019-04-22 12:12:44');
 
 -- --------------------------------------------------------
 
@@ -80,8 +80,7 @@ CREATE TABLE `event` (
 --
 
 INSERT INTO `event` (`id`, `nama_game`, `judul`, `keterangan`, `waktu`) VALUES
-(1, 'LostSaga', 'a', 'a', '2019-04-21 21:37:04'),
-(2, 'LostSaga', 'awdwadwad', 'awdwadwadawd', '2019-04-22 12:12:33');
+(1, 'LostSaga', 'a', 'a', '2019-04-21 21:37:04');
 
 -- --------------------------------------------------------
 
@@ -102,7 +101,7 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`id`, `nama_game`, `judul`, `keterangan`, `waktu`) VALUES
-(2, 'LostSaga', 'a', 'a', '2019-04-21 21:29:43');
+(2, 'LostSaga', 'asss', 'a', '2019-04-22 12:12:44');
 
 -- --------------------------------------------------------
 
@@ -123,7 +122,7 @@ CREATE TABLE `notice` (
 --
 
 INSERT INTO `notice` (`id`, `nama_game`, `judul`, `keterangan`, `waktu`) VALUES
-(1, 'LostSaga', 'awdawdadwadw', 'dwawaddaw', '2019-04-22 12:12:14');
+(1, 'LostSaga', 'awdawdadwadw', 'a', '2019-04-22 12:12:14');
 
 -- --------------------------------------------------------
 
@@ -144,7 +143,7 @@ CREATE TABLE `updates` (
 --
 
 INSERT INTO `updates` (`id`, `nama_game`, `judul`, `keterangan`, `waktu`) VALUES
-(1, 'LostSaga', 'awdawdda', 'awdwaddawwad', '2019-04-22 12:12:23');
+(1, 'LostSaga', 'awdawdda', 'a', '2019-04-22 12:12:23');
 
 -- --------------------------------------------------------
 
@@ -230,7 +229,7 @@ ALTER TABLE `competition`
 -- AUTO_INCREMENT for table `event`
 --
 ALTER TABLE `event`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `news`
