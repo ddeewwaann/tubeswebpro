@@ -71,11 +71,39 @@ class adminController extends CI_Controller{
         $data['competition'] = $this->admin->getberita($competition);
         $this->load->view('admin_dashboarddelete5',$data);
     }
-    public function dashboar_delete_data($id,$table)
+    public function dashboard_delete_data($id,$table)
 	{
         $this->admin->hapusberita($id,$table);
 		redirect('adminController/dashboard_delete');
 	}
+    public function dashboard_edit($table,$id){
+        $data["daftaredit"] = $this->admin->getberitaByid($table,$id);
+        $this->load->view('admin_dashboardedit',$data);
+    }
+    
+    public function dashboard_edit_data(){
+        $id = $this->input->post('id');
+        $namagame = $this->input->post('namagame');
+        $judul = $this->input->post('judul');
+        $keterangan = $this->input->post('keterangan');
+        $waktu = $this->input->post('waktu');
+        $table = $this->input->post('tipe_berita');
+        $data_update = array (
+            'id' => $id,
+            'judul'=> $judul,
+            'keterangan'=> $keterangan,
+            'nama_game'=>$namagame,
+            'waktu'=>$waktu,
+    );
+        $update = $this->admin->edit_berita($table,$id,$data_update);
+        if ($update) {
+            $this->session->set_flashdata('verif_alert', 'verif_berhasil');
+            redirect('adminController/dashboard_delete');
+        } else {
+            $this->session->set_flashdata('verif_alert', 'verif_gagal');
+            redirect('adminController/dashboard_delete');
+        }
+    }
 }
 
 ?>

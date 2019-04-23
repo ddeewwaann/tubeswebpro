@@ -42,10 +42,9 @@
                     <div class="col-5">
                         <nav class="navbar navbar-expand-xl">
                             <ul class="navbar-nav">
-                                <li class="nav-item"><a class="nav-link a" href="<?php echo base_url('index.php/adminController/dashboard') ?>">VIEW</a></li>
+                                <li class="nav-item"><a class="nav-link a" href="<?php echo base_url('index.php/adminController/dashboard') ?>">HOME</a></li>
                                 <li class="nav-item"><a class="nav-link a" href="<?php echo base_url('index.php/adminController/dashboard_add') ?>">ADD</a></li>
-                                <li class="nav-item"><a class="nav-link a" href="">EDIT</a></li>
-                                <li class="nav-item"><a class="nav-link a" href="<?php echo base_url('index.php/adminController/dashboard_delete') ?>">DELETE</a></li>
+                                <li class="nav-item"><a class="nav-link a" href="<?php echo base_url('index.php/adminController/dashboard_delete') ?>">EDIT DAN DELETE</a></li>
                                 <li class="nav-item" id="logout"><a href="<?php echo base_url('index.php/adminController/login')?>"><button type="submit" class="btn btn-secondary buttonheader">Logout</button></a></li>
                             </ul>
                         </nav>
@@ -110,7 +109,8 @@
                         <td class="text-center"><?= $upd['keterangan']; ?></td>
                         <td class="text-center"><?= $upd['waktu']; ?></td>
                         <td class="text-center">
-                            <a href="<?= base_url(); ?>index.php/adminController/dashboar_delete_data/<?= $upd['id'] ?>/updates " class="badge badge-danger float-center" onclick="return confirm('Apakah anda yakin menghapus data ini?');" ?>hapus</a>
+                            <a href="<?= base_url(); ?>index.php/adminController/dashboard_delete_data/<?= $upd['id'] ?>/updates " class="badge badge-danger float-center" onclick="return confirm('Apakah anda yakin menghapus data ini?');" ?>hapus</a>
+                            <a href="<?= base_url(); ?>index.php/adminController/dashboard_edit/updates/<?= $upd['id'] ?>" class="badge badge-success float-center" ?>ubah</a>
                         </td>
                     </tr>
                     <?php endforeach; ?>

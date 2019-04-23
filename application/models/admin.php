@@ -25,12 +25,27 @@ class admin extends CI_Model{
         $data = $this->db->get($table);
 		return $data->result_array();
 	}
+    public function getberitaByid($table,$id){
+        $this->db->where('id',$id);
+        $data = $this->db->get($table);
+		return $data->result_array();
+    }
     public function hapusberita($id,$table)
 	{
 		//use query builder to delete data based on id 
         $this->db->where('id',$id);
 		return $this->db->delete($table);
 	}
+    function edit_berita($table,$id,$data){
+    $this->db->where('id', $id);
+    $update = $this->db->update($table,$data);
+
+    if ($update){
+      return TRUE;
+    }else{
+      return FALSE;
+    }
+    }
     
 
 }

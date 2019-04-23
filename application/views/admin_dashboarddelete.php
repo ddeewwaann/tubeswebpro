@@ -30,6 +30,14 @@
         </style>
         
     </head>
+    <?php 
+        if ($this->session->flashdata('verif_alert')=='verif_berhasil'){
+            echo "<script>alert('UPDATE DATA BERHASIL');</script>";
+        }
+        else if($this->session->flashdata('verif_alert')=='verif_gagal'){
+            echo "<script>alert('UPDATE DATA GAGAL');</script>";
+        }
+    ?>
     <body>
     <section>
             <div class="container-fluid header">
@@ -42,10 +50,9 @@
                     <div class="col-5">
                         <nav class="navbar navbar-expand-xl">
                             <ul class="navbar-nav">
-                                <li class="nav-item"><a class="nav-link a" href="<?php echo base_url('index.php/adminController/dashboard') ?>">VIEW</a></li>
+                                <li class="nav-item"><a class="nav-link a" href="<?php echo base_url('index.php/adminController/dashboard') ?>">HOME</a></li>
                                 <li class="nav-item"><a class="nav-link a" href="<?php echo base_url('index.php/adminController/dashboard_add') ?>">ADD</a></li>
-                                <li class="nav-item"><a class="nav-link a" href="">EDIT</a></li>
-                                <li class="nav-item"><a class="nav-link a" href="<?php echo base_url('index.php/adminController/dashboard_delete') ?>">DELETE</a></li>
+                                <li class="nav-item"><a class="nav-link a" href="<?php echo base_url('index.php/adminController/dashboard_delete') ?>">EDIT DAN DELETE</a></li>
                                 <li class="nav-item" id="logout"><a href="<?php echo base_url('index.php/adminController/login')?>"><button type="submit" class="btn btn-secondary buttonheader">Logout</button></a></li>
                             </ul>
                         </nav>
@@ -110,7 +117,8 @@
                         <td class="text-center"><?= $nws['keterangan']; ?></td>
                         <td class="text-center"><?= $nws['waktu']; ?></td>
                         <td class="text-center">
-                            <a href="<?= base_url(); ?>index.php/adminController/dashboar_delete_data/<?= $nws['id'] ?>/news " class="badge badge-danger float-center" onclick="return confirm('Apakah anda yakin menghapus data ini?');" ?>hapus</a>
+                            <a href="<?= base_url(); ?>index.php/adminController/dashboard_delete_data/<?= $nws['id'] ?>/news " class="badge badge-danger float-center" onclick="return confirm('Apakah anda yakin menghapus data ini?');" ?>hapus</a>
+                            <a href="<?= base_url(); ?>index.php/adminController/dashboard_edit/news/<?= $nws['id'] ?>" class="badge badge-success float-center" ?>ubah</a>
                         </td>
                     </tr>
                     <?php endforeach; ?>

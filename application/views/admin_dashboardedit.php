@@ -34,11 +34,6 @@
             echo "<script>alert('Login Berhasil');</script>";
         }
     ?>
-    <?php 
-        if ($this->session->flashdata('daftar_alert')=='registrasi_berhasil'){
-            echo "<script>alert('Daftar Berita Succes');</script>";
-        }
-    ?>
     <body>
     <section>
             <div class="container-fluid header">
@@ -50,10 +45,11 @@
                     <div class="col-4"></div>
                     <div class="col-5">
                         <nav class="navbar navbar-expand-xl">
-                           <ul class="navbar-nav">
-                                <li class="nav-item"><a class="nav-link a" href="<?php echo base_url('index.php/adminController/dashboard') ?>">HOME</a></li>
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a class="nav-link a" href="">VIEW</a></li>
                                 <li class="nav-item"><a class="nav-link a" href="<?php echo base_url('index.php/adminController/dashboard_add') ?>">ADD</a></li>
-                                <li class="nav-item"><a class="nav-link a" href="<?php echo base_url('index.php/adminController/dashboard_delete') ?>">EDIT DAN DELETE</a></li>
+                                <li class="nav-item"><a class="nav-link a" href="">EDIT</a></li>
+                                <li class="nav-item"><a class="nav-link a" href="<?php echo base_url('index.php/adminController/dashboard_delete') ?>">DELETE</a></li>
                                 <li class="nav-item" id="logout"><a href="<?php echo base_url('index.php/adminController/login')?>"><button type="submit" class="btn btn-secondary buttonheader">Logout</button></a></li>
                             </ul>
                         </nav>
@@ -61,29 +57,13 @@
                 </div>
             </div>
         </section>
+        <br>
         <section>
-            <div class="shadow-lg p-4 mb-4 bg-white">
+        <div class="shadow-lg p-4 mb-4 bg-white">
                             <div class="row">
                             <div class="col-1"></div>
                             <div class="col-10">
-                            <form action="<?php echo base_url('index.php/adminController/dashboard_add_data')?>" method="post">
-                                <div class="form-group">
-                                    <div class="row">
-                                    <div class="col-3">
-                                        <h5>Nama Game</h5>
-                                    </div>
-                                    <div class="col-8">
-                                        <select type="text" class="form-control" name="nama_game">
-                                            <option>LostSaga</option>
-                                            <option>Dragonest</option>
-                                            <option>Atlantica</option>
-                                            <option>Icarus</option>
-                                            <option>Luna</option>
-                                            <option>TreeOfSavior</option>
-                                        </select>
-                                    </div>
-                                    </div>
-                                </div>
+                            <form action="<?php echo base_url('index.php/adminController/dashboard_edit_data')?>" method="post">
                                 <div class="form-group">
                                     <div class="row">
                                     <div class="col-3">
@@ -99,6 +79,22 @@
                                         </select>
                                     </div>
                                     </div>
+                                    <div class="row">
+                                    <div class="col-3">
+                                        <h5>ID Berita</h5>
+                                    </div>
+                                    <div class="col-8">
+                                        <input type="text" id="id" class="form-control"  name="id" value="<?php echo $daftaredit[0]["id"]?>" readonly>
+                                    </div>
+                                    </div>
+                                    <div class="row">
+                                    <div class="col-3">
+                                        <h5>Nama Game</h5>
+                                    </div>
+                                    <div class="col-8">
+                                        <input type="text" id="id" class="form-control"  name="namagame" value="<?php echo $daftaredit[0]["nama_game"]?>">
+                                    </div>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="row">
@@ -106,8 +102,7 @@
                                         <h5>Judul</h5>
                                     </div>
                                     <div class="col-8">
-                                        <input type="text"  name="judul"  class="form-control" required>
-                                        <span id='message'></span>
+                                        <input type="text" id="id" class="form-control"  name="judul" value="<?php echo $daftaredit[0]["judul"]?>" >
                                     </div>
                                     </div>
                                 </div>
@@ -117,14 +112,24 @@
                                         <h5>Keterangan</h5>
                                     </div>
                                     <div class="col-8">
-                                        <textarea class="form-control" rows="5" id="comment" name="keterangan"></textarea>
+                                        <input type="text" id="id" class="form-control"  name="keterangan" value="<?php echo $daftaredit[0]["keterangan"]?>" >
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                    <div class="col-3">
+                                        <h5>Waktu</h5>
+                                    </div>
+                                    <div class="col-8">
+                                        <input type="datetime" id="id" class="form-control"  name="waktu" value="<?php echo $daftaredit[0]["waktu"]?>">
                                     </div>
                                     </div>
                                 </div>
                                 
                                 <div class="row">
                                     <div class="col-5"></div>
-                                    <div class="col-3>"><button type="submit" class="btn btn-primary">ADD</button></div>
+                                    <div class="col-3>"><button type="submit" class="btn btn-primary">EDIT</button></div>
                                 </div>
                             </form>
                             </div>
