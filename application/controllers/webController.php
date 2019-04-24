@@ -207,6 +207,10 @@ class webController extends CI_Controller {
      public function page_icarus(){
         $this->load->view('page_icarus');
     }
+    
+      public function lupa_password(){
+        $this->load->view('lupa_password');
+    }
 }
 
 

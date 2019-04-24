@@ -116,7 +116,7 @@
                                 <a href="<?php echo base_url('index.php/webController/daftar_akun')?>">Daftar</a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#">Forget Password ? </a>
+                                <a href="<?php echo base_url('index.php/webController/lupa_password')?>">Forget Password ? </a>
                             </li>
                         </ul>
                         </form>
