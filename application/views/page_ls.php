@@ -12,6 +12,27 @@
         <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/style/stylepagels.css') ?>">
     </head>
   
+    <?php
+        if($this->session->userdata('logged_in')==1){
+            echo '<script>
+                $(document).ready(function(){
+                    $("#login").hide();
+                    $("#register").hide();
+                    $("#logout").show();
+                });
+                </script>';
+        }
+        else{
+             echo '<script>
+                $(document).ready(function(){
+                    $("#login").show();
+                    $("#register").show();
+                    $("#logout").hide();
+                });
+                </script>';
+        }
+        
+    ?>
     <body>
         
 
@@ -31,9 +52,9 @@
                                 <li class="nav-item"><a class="nav-link a" href="">G-CASH</a></li>
                                 <li class="nav-item"><a class="nav-link a" href="<?php echo base_url('index.php/webController/download') ?>">DOWNLOAD</a></li>
                                 <li class="nav-item"><a class="nav-link a" href="">GEMSCOOL TV</a></li>
-                                <li class="nav-item"><a class="nav-link a" href=""><img src="<?php echo base_url('assets/img/login_button.png')?>"></a></li>
-                                <li class="nav-item"><a class="nav-link a" href=""><img src="<?php echo base_url('assets/img/register_button.png')?>"></a></li>
-
+                                <li class="nav-item" id="login"><a class="nav-link a" href="<?php echo base_url('index.php/webController/login_button')?>"><img src="<?php echo base_url('assets/img/login_button.png')?>"></a></li>
+                                <li class="nav-item" id="register"><a class="nav-link a" href="<?php echo base_url('index.php/webController/daftar_akun')?>"><img src="<?php echo base_url('assets/img/register_button.png')?>"></a></li>
+                                <li class="nav-item" id="logout"><a href="<?php echo base_url('index.php/webController/logout')?>"><button type="submit" class="btn btn-secondary buttonheader">Logout</button></a></li>
 
                             </ul>
                         </nav>

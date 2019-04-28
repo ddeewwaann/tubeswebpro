@@ -168,7 +168,17 @@ class webController extends CI_Controller {
         $this->load->view('download');
     }
     public function news(){
-        $this->load->view('news');
+        $news = 'news';
+        $data['news'] = $this->admin->getberita($news);
+        $notice = 'notice';
+        $data['notice'] = $this->admin->getberita($notice);
+        $update = 'updates';
+        $data['update'] = $this->admin->getberita($update);
+        $event = 'event';
+        $data['event'] = $this->admin->getberita($event);
+        $competition = 'competition';
+        $data['competition'] = $this->admin->getberita($competition);
+        $this->load->view('news',$data);
     }
     public function news_news(){
         $news = 'news';

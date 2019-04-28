@@ -62,12 +62,12 @@
                                                 onmouseover="this.src='<?php echo base_url('assets/img/nav_luna_hov.png')?>'"
                                                 onmouseout="this.src='<?php echo base_url('assets/img/nav_luna.png')?>'">
                                                 </a></li>
-                                            <li class="list-inline-item"><a href="#">
+                                            <li class="list-inline-item"><a href="<?php echo base_url('index.php/webController/homepagetos')?>">
                                                 <img src="<?php echo base_url('assets/img/tos.png')?>"
                                                 onmouseover="this.src='<?php echo base_url('assets/img/tos_hov.png')?>'"
                                                 onmouseout="this.src='<?php echo base_url('assets/img/tos.png')?>'">
                                                 </a></li>
-                                            <li class="list-inline-item"><a href="#">
+                                            <li class="list-inline-item"><a href="<?php echo base_url('index.php/webController/page_icarus')?>">
                                                 <img src="<?php echo base_url('assets/img/icarus_nav.png')?>"
                                                 onmouseover="this.src='<?php echo base_url('assets/img/icarus_nav_hov.png')?>'"
                                                 onmouseout="this.src='<?php echo base_url('assets/img/icarus_nav.png')?>'">
@@ -83,7 +83,7 @@
                                                 onmouseover="this.src='<?php echo base_url('assets/img/atlantica_nav_hov.png')?>'"
                                                 onmouseout="this.src='<?php echo base_url('assets/img/atlantica_nav.png')?>'">
                                                 </a></li>
-                                            <li class="list-inline-item"><a href="#">
+                                            <li class="list-inline-item"><a href="<?php echo base_url('index.php/webController/page_ls')?>">
                                                 <img src="<?php echo base_url('assets/img/ls_nav.png')?>"
                                                 onmouseover="this.src='<?php echo base_url('assets/img/ls_nav_hover.png')?>'"
                                                 onmouseout="this.src='<?php echo base_url('assets/img/ls_nav.png')?>'">
@@ -156,6 +156,60 @@
                                 <a class="nav-link news" href="<?php echo base_url('index.php/webController/news_competition') ?>">COMPETITION</a>
                             </li>
                             </ul>
+                        <div class="row">
+                                <div class="col-12">
+                                    
+                                    <table class="table mt-5">
+                                        <tbody>
+                                            <tr><?php foreach ($news as $nws) : ?>
+                                                <td width="10%"><h10><?= $nws['nama_game']; ?></h10></td>
+                                                <td width="70%">
+                                                    <strong><?= $nws['judul']; ?></strong>
+                                                    <p><?= $nws['keterangan']; ?></p>
+                                                    </td>
+                                                <td width="20%"><p><?= $nws['waktu']; ?></p></td>
+                                            </tr>
+                                            <?php endforeach; ?>
+                                            <tr><?php foreach ($notice as $ntc) : ?>
+                                                <td width="10%"><h10><?= $ntc['nama_game']; ?></h10></td>
+                                                <td width="70%">
+                                                    <strong><?= $ntc['judul']; ?></strong>
+                                                    <p><?= $ntc['keterangan']; ?></p>
+                                                    </td>
+                                                <td width="20%"><p><?= $ntc['waktu']; ?></p></td>
+                                            </tr>
+                                            <?php endforeach; ?>
+                                            <tr><?php foreach ($update as $udt) : ?>
+                                                <td width="10%"><h10><?= $udt['nama_game']; ?></h10></td>
+                                                <td width="70%">
+                                                    <strong><?= $udt['judul']; ?></strong>
+                                                    <p><?= $udt['keterangan']; ?></p>
+                                                    </td>
+                                                <td width="20%"><p><?= $udt['waktu']; ?></p></td>
+                                            </tr>
+                                            <?php endforeach; ?>
+                                            <tr><?php foreach ($event as $evn) : ?>
+                                                <td width="10%"><h10><?= $evn['nama_game']; ?></h10></td>
+                                                <td width="70%">
+                                                    <strong><?= $evn['judul']; ?></strong>
+                                                    <p><?= $evn['keterangan']; ?></p>
+                                                    </td>
+                                                <td width="20%"><p><?= $evn['waktu']; ?></p></td>
+                                            </tr>
+                                            <?php endforeach; ?>
+                                            <tr><?php foreach ($competition as $cpt) : ?>
+                                                <td width="10%"><h10><?= $cpt['nama_game']; ?></h10></td>
+                                                <td width="70%">
+                                                    <strong><?= $cpt['judul']; ?></strong>
+                                                    <p><?= $cpt['keterangan']; ?></p>
+                                                    </td>
+                                                <td width="20%"><p><?= $cpt['waktu']; ?></p></td>
+                                            </tr>
+                                            <?php endforeach; ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                     </div>
                     <div class="col-2">
                         <h5>Find us on Youtube</h5>

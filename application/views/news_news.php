@@ -62,12 +62,12 @@
                                                 onmouseover="this.src='<?php echo base_url('assets/img/nav_luna_hov.png')?>'"
                                                 onmouseout="this.src='<?php echo base_url('assets/img/nav_luna.png')?>'">
                                                 </a></li>
-                                            <li class="list-inline-item"><a href="#">
+                                            <li class="list-inline-item"><a href="<?php echo base_url('index.php/webController/homepagetos')?>">
                                                 <img src="<?php echo base_url('assets/img/tos.png')?>"
                                                 onmouseover="this.src='<?php echo base_url('assets/img/tos_hov.png')?>'"
                                                 onmouseout="this.src='<?php echo base_url('assets/img/tos.png')?>'">
                                                 </a></li>
-                                            <li class="list-inline-item"><a href="#">
+                                            <li class="list-inline-item"><a href="<?php echo base_url('index.php/webController/page_icarus')?>">
                                                 <img src="<?php echo base_url('assets/img/icarus_nav.png')?>"
                                                 onmouseover="this.src='<?php echo base_url('assets/img/icarus_nav_hov.png')?>'"
                                                 onmouseout="this.src='<?php echo base_url('assets/img/icarus_nav.png')?>'">
@@ -83,7 +83,7 @@
                                                 onmouseover="this.src='<?php echo base_url('assets/img/atlantica_nav_hov.png')?>'"
                                                 onmouseout="this.src='<?php echo base_url('assets/img/atlantica_nav.png')?>'">
                                                 </a></li>
-                                            <li class="list-inline-item"><a href="#">
+                                            <li class="list-inline-item"><a href="<?php echo base_url('index.php/webController/page_ls')?>">
                                                 <img src="<?php echo base_url('assets/img/ls_nav.png')?>"
                                                 onmouseover="this.src='<?php echo base_url('assets/img/ls_nav_hover.png')?>'"
                                                 onmouseout="this.src='<?php echo base_url('assets/img/ls_nav.png')?>'">
