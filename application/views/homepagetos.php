@@ -11,7 +11,27 @@
          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/style/styletos.css') ?>">
     </head>
-  
+  <?php
+        if($this->session->userdata('logged_in')==1){
+            echo '<script>
+                $(document).ready(function(){
+                    $("#login").hide();
+                    $("#register").hide();
+                    $("#logout").show();
+                });
+                </script>';
+        }
+        else{
+             echo '<script>
+                $(document).ready(function(){
+                    $("#login").show();
+                    $("#register").show();
+                    $("#logout").hide();
+                });
+                </script>';
+        }
+        
+    ?>
     <body>
         
 
@@ -33,9 +53,9 @@
                                 <li class="nav-item"><a class="nav-link a" href="">G-CASH</a></li>
                                 <li class="nav-item"><a class="nav-link a" href="<?php echo base_url('index.php/webController/download') ?>">DOWNLOAD</a></li>
                                 <li class="nav-item"><a class="nav-link a" href="">GEMSCOOL TV</a></li>
-                                <li class="nav-item"><a class="nav-link a" href=""><img src="<?php echo base_url('assets/img/login_button.png')?>"></a></li>
-                                <li class="nav-item"><a class="nav-link a" href=""><img src="<?php echo base_url('assets/img/register_button.png')?>"></a></li>
-
+                                <li class="nav-item" id="login"><a class="nav-link a" href="<?php echo base_url('index.php/webController/login_button')?>"><img src="<?php echo base_url('assets/img/login_button.png')?>"></a></li>
+                                <li class="nav-item" id="register"><a class="nav-link a" href="<?php echo base_url('index.php/webController/daftar_akun')?>"><img src="<?php echo base_url('assets/img/register_button.png')?>"></a></li>
+                                <li class="nav-item" id="logout"><a href="<?php echo base_url('index.php/webController/logout')?>"><button type="submit" class="btn btn-secondary buttonheader">Logout</button></a></li>
 
                             </ul>
                         </nav>
@@ -122,7 +142,7 @@
                 <div class="container">
                 <div class="row">
                     <div class="col">
-                        <form action="login.php" method="POST">
+                        <form action="<?php echo base_url('index.php/webController/login_homepage')?>" method="POST">
                             <fieldset>
                            <p>
                                 <input type="text" class="form-control" id="idgemscool" placeholder="ID Gemscool" name="id">     
@@ -130,14 +150,15 @@
                             <p>
                                 <input type="password" class="form-control" id="passwordgemscool" placeholder="Password" name="password">
                             </p>
-                    
+                    <button type="submit"><a href=""><img class="" src="<?php echo base_url('assets/img/login2.png')?>"></a></button>
                 <p>
                 </p>
         </fieldset>
     </form>
+                                                                                                                                        
                     </div>
                     <div class="col">
-                         <a href="<?php echo base_url('')?>"><img class="" src="<?php echo base_url('assets/img/login2.png')?>"></a>
+                         
               
                     </div>
             </div>

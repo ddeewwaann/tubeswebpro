@@ -47,7 +47,7 @@
                         <nav class="navbar navbar-expand-xl">
                             <ul class="navbar-nav">
                                 <li class="nav-item"><a class="nav-link a" href="<?php echo base_url('index.php/webController/news') ?>">ALL GAMES</a></li>
-                                <li class="nav-item"><a class="nav-link a" href="">NEWS</a></li>
+                                <li class="nav-item"><a class="nav-link a" href="<?php echo base_url('index.php/webController/news') ?>">NEWS</a></li>
                                 <li class="nav-item"><a class="nav-link a" href="">FORUM</a></li>
                                 <li class="nav-item"><a class="nav-link a" href="">G-CASH</a></li>
                                 <li class="nav-item"><a class="nav-link a" href="<?php echo base_url('index.php/webController/download') ?>">DOWNLOAD</a></li>
