@@ -32,6 +32,23 @@
         }
         
     ?>
+    <?php
+        if($this->session->userdata('logged_in')==1){
+            echo '<script>
+                $(document).ready(function(){
+                    $("#loginbox").hide();
+                });
+                </script>';
+        }
+        else{
+             echo '<script>
+                $(document).ready(function(){
+                    $("#loginbox").show();
+                });
+                </script>';
+        }
+        
+    ?>
     <body>
         
 
@@ -139,7 +156,7 @@
              <div class="col-sm">
                 <a href="<?php echo base_url('')?>"><img class="" src="<?php echo base_url('assets/img/login.png')?>"></a>
                 <br>
-                <div class="container">
+                <div class="container" id="loginbox">
                 <div class="row">
                     <div class="col">
                         <form action="<?php echo base_url('index.php/webController/login_homepage')?>" method="POST">
